@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Away</title>
+</head>
+<body>
+
+    <div class="overall">
+        <img class="qm" src="https://i.pinimg.com/originals/ac/33/d4/ac33d4bc9d5f3750f08ea36528e0218c.gif" alt="">
+        <img src="https://media.tenor.com/xymOD7B6y3kAAAAi/tontonfriends-tonton.gif" alt="" class="point">
+        <div class="input"><h1>Do you Love Me??❤💕</h1></div>
+        <div class="buttons">
+            <button class="yes">Yes</button>
+            <button class="no">No</button>
+        </div>
+        <img src="https://media.tenor.com/dWAduooJ0SYAAAAi/tonton-tonton-friends.gif" alt="" class="side">
+        <img src="https://media2.giphy.com/media/hnz3zADAKnH5SFhkfJ/giphy.gif" alt="" class="dzy">
+    </div>
+
+    <div class="second">
+        <div class="outline"><h1>I Have a Girl Friend!!😂😁</h1></div>
+        <img class="secondimage" src="https://media1.tenor.com/images/83ad0de444d1b0bbd270bf9fecb72550/tenor.gif?itemid=10874795.jpg" alt="">
+        
+    </div>
+
+    <div class="forno">
+
+        <img src="https://media1.tenor.com/m/PU07RaXujbYAAAAd/inem-kaeroshl.gif" alt="" class="polo">
+    </div>
+    
+</body>
+<style>
+
+    .forno{
+        width: 80%;
+        display: none;
+    }
+    .qm{
+        position: absolute;
+        margin-right: 900px;
+        margin-bottom: 500px;
+    }
+
+    .side{
+        position: absolute;
+        margin-left: 1300px;
+        margin-bottom: 500px;
+    }
+    .outline{
+        position: absolute;
+        margin-top: 250px;
+        margin-left: 650px;
+    }
+
+    .point{
+        position: absolute;
+        margin-right: 470px;
+    }
+
+    .dzy{
+        
+        margin-top: 30px;
+        margin-left: 700px;
+    }
+
+
+
+    body{
+        width: 800px; /* Fixed width */
+        height: 600px; /* Fixed height */
+        overflow: hidden; /* Prevent scrolling */
+        margin: 0 auto; /* Center the body */
+    }
+
+    .second{
+        display: none;
+    }
+    .secondimage{
+        width: 80%;
+    }
+
+    .overall{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        padding-left: 100px;
+        padding-right: 200px;
+        left: 0;
+    }
+
+    .buttons{
+        display: flex;
+        gap: 90px;
+        z-index: 1000;
+    }
+
+    button{
+        position: absolute;
+        color: bisque;
+        background-color: rgb(4, 0, 65);
+        border-radius: 10%;
+        height: 40px;
+        width: 60px;
+        font-size: larger;
+        border: none;
+        margin-right: 50px;
+        margin-top: 40px;
+        transition: left 0.5s ease, top 0.5s ease;
+    }
+
+    button:hover{
+        background-color: rgb(255, 0, 212);
+        color: rgb(1, 2, 2);
+        cursor: pointer;
+    }
+    .no{
+        position: absolute;
+        left: 50%;
+        top: 245px;
+    }
+
+    .yes{
+        left: 35%;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+</style>
+<script>
+    var nop = document.querySelector(".no");
+    function changeLocation() {
+        var maxX = 900; // 800px (body width) - 60px (button width)
+        var maxY = 200; // 600px (body height) - 40px (button height)
+        var x = Math.floor(Math.random() * maxX);
+        var y = Math.floor(Math.random() * maxY);
+        nop.style.left = x + "px";
+        nop.style.top = y + "px";
+    }
+    nop.addEventListener("mouseover", changeLocation);
+    var ov = document.querySelector(".overall");
+    var sec = document.querySelector(".second");
+    
+    function van() {
+        ov.style.display = "none";
+        sec.style.display = "block";
+    }
+
+    var yep = document.querySelector(".yes");
+    yep.addEventListener("click", van);
+
+    function go(){
+        ov.style.display="none";
+        pol.style.display="block";
+    }
+    nop.addEventListener("click", go);
+
+    var pol=document.querySelector(".forno");
+</script>
+</html>
